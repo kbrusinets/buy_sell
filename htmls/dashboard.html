@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+{% block content %}
+<script language='javascript'>
+     $(document).ready(function(){
+        $('.ui.accordion').accordion();
+     });
+</script>
+<div class="segment">
+<div class="ui three column grid">
+  <div class="row">
+    <div class="center aligned column">
+      <div class="ui segment">
+        <div class="ui small image">
+          <img src="{{ url_for('static', path='image.png') }}">
+        </div>
+        <div class="ui violet header">
+          Title
+        </div>
+        <div class="ui list">
+          <div class="item">
+            <div class="header">Prop</div>
+            value
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <h1 class="ui center aligned header">
+        Buying
+      </h1>
+        <div class="ui list" style="overflow-y:scroll;">
+          <div class="item">
+            <div class="ui segment">
+              <div class="ui two column padded grid">
+                <div class="row">
+                  <div class="left floated eleven wide column">
+                    <i class="big hashtag icon"></i>
+                    1
+                  </div>
+                  <div class="right floated right aligned five wide column">
+                    <img class="right floated ui avatar image" src="{{ url_for('static', path='avatar.jpg') }}">
+                    фывф
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="left floated four wide column">
+                    <i class="big dollar icon"></i>
+                    12000
+                  </div>
+                  <div class="twelve wide column">
+                    <div class="ui segment">Это комментарий. Хочу продать или купить или продать еще не решил продать купить продать
+                      купить неважно.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui segment">asdasdas</div>
+          </div>
+          <div class="item">
+            <div class="ui segment">asdasdas</div>
+          </div>
+          <div class="item">
+            <div class="ui segment">asdasdas</div>
+          </div>
+          <div class="item">
+            <div class="ui segment">asdasdas</div>
+          </div>
+          <div class="item">
+            <div class="ui segment">asdasdas</div>
+          </div>
+          <div class="item">
+            <div class="ui segment">asdasdas</div>
+          </div>
+          <div class="item">
+            <div class="ui segment">asdasdas</div>
+          </div>
+          <div class="item">
+            <div class="ui segment">asdasdas</div>
+          </div>
+          <div class="item">
+            <div class="ui segment">asdasdas</div>
+          </div>
+          <div class="item">
+            <div class="ui segment">asdasdas</div>
+          </div>
+          <div class="item">
+            <div class="ui segment">asdasdas</div>
+          </div>
+        </div>
+    </div>
+    <div class="column">
+      <h1 class="ui center aligned header">
+        Selling
+      </h1>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}
