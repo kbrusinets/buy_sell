@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/components/accordion.js"></script>
+    <script src="{{ url_for('static', path='/js/custom.js') }}"></script>
+    <style>
+        label {
+            font-size: 1em !important;
+        }
+    </style>
+</head>
+<body style="background-color:#E0E0E0;">
+<div class="ui one column grid container">
+    <div class="row">
+        <div class="ui basic segment">
+            <img class="ui small rounded image" src="{{ url_for('static', path='avatar.jpg') }}">
+        </div>
+    </div>
+    <div class="row">
+        <div class="ui basic segment">
+            <form class="ui form">
+                <h2 class="ui dividing header">Account Information</h2>
+                <div class="field">
+                    <label>Name</label>
+                    <input type="text" placeholder="User">
+                </div>
+                <div class="field">
+                    <label>Email</label>
+                    <input type="text" placeholder="123@gmail.com">
+                </div>
+                <div class="field">
+                    <label>Password</label>
+                    <input type="text" placeholder="1234">
+                </div>
+                <div class="field">
+                    <label>Telegram</label>
+                    <input type="text" placeholder="@telegram">
+                </div>
+                <div class="field">
+                    <label>Discord</label>
+                    <input type="text" placeholder="@discord">
+                </div>
+                <div class="field">
+                    <label>Facebook</label>
+                    <input type="text" placeholder="@facebook">
+                </div>
+                <div class="ui positive  basic button">Submit</div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

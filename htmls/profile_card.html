@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/components/accordion.js"></script>
+    <script src="{{ url_for('static', path='/js/custom.js') }}"></script>
+    <style>
+        a {
+            text-decoration: underline;
+        }
+        .ui.button.telegram-button {
+            background-color: #37AFE2;
+        }
+        .ui.button.discord-button {
+            background-color: #7289DA;
+        }
+        img+h2 {
+            margin:0;
+        }
+
+    </style>
+</head>
+<body style="background-color:#E0E0E0;">
+<div class="ui one column center aligned grid container">
+    <div class="row">
+        <div class="column twelve wide">
+            <div class="ui basic padded segment">
+                <script language='javascript'>$(document).ready(function(){$('h2').dimmer('show');});</script>
+                <div class="ui centered tiny image" src="{{ url_for('static', path='avatar.jpg') }}">
+                    <div class="ui dimmer">
+                        <div class="content"><h2 class="ui inverted header">Title</h2></div>
+                    </div>
+                </div>
+                <h2>User</h2>
+                <div class="ui divider"></div>
+                <div class='ui circular icon button telegram-button'>
+                    <i class='large telegram icon'></i>
+                </div>
+                <div class='ui circular icon button discord-button'>
+                    <i class='large discord icon'></i>
+                </div>
+                <div class='ui circular facebook icon button'>
+                    <i class='large facebook icon'></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="ui top attached tabular menu">
+            <a class="active item" data-tab="first">Buying</a>
+            <a class="item" data-tab="second">Selling</a>
+        </div>
+        <div class="ui bottom attached active tab segment" data-tab="first">
+            <div class="ui list">
+                <div class="ui segment">
+                    <div class="ui two column padded divided grid">
+                        <div class="three wide center aligned column">
+                            <img class="ui small centered rounded image"
+                                 src="{{ url_for('static', path='image.png') }}">
+                            <h3>Labbit</h3>
+                        </div>
+                        <div class="thirteen wide left aligned column">
+                            <div class="ui one column grid">
+                                <div class="row">
+                                    <div class="column">
+                                        <i class="big hashtag icon"></i>
+                                        1
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <i class="big dollar icon"></i>
+                                        12000
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <div class="ui segment">Это комментарий. Хочу продать или купить или продать еще
+                                            не решил продать купить продать
+                                            купить неважно.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<img class="right floated ui avatar image" src="{{ url_for('static', path='avatar.jpg') }}">
+                        фывф-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="second">
+            Second
+        </div>
+    </div>
+    <script language='javascript'>$('.menu .item').tab();</script>
+</div>
+</div>
+</body>
+</html>

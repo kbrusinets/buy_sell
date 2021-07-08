@@ -11,3 +11,15 @@ async def root(request: Request):
     return templates.TemplateResponse("dashboard.html", {
         "request": request
     })
+
+@app.get("/1")
+async def root(request: Request):
+    return templates.TemplateResponse("profile_card.html", {
+        "request": request
+    })
+
+@app.get("/1/edit")
+async def root(request: Request):
+    return templates.TemplateResponse("profile_edit.html", {
+        "request": request
+    })
